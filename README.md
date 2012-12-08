@@ -15,4 +15,6 @@ Built using HTML, LESS CSS and the [Semantic.gs](http://semantic.gs) grid system
 
 Learn more about Citizens Connected at their website [citizensconnected.com](http://citizensconnected.com/).
 
+![Citizens Connected proposed colour scheme](https://raw.github.com/tinacious/citizens-connected-theme/master/planning/colors.png)
+
 ![Citizens Connected wireframes](https://raw.github.com/tinacious/citizens-connected-theme/master/planning/wireframes.png)
