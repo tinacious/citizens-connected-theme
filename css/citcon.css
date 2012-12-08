@@ -26,11 +26,11 @@ h4 {
 }
 h1 {
   font-size: 2.2em;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.5em;
 }
 h2 {
   font-size: 2em;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.4em;
   margin-top: 0.5em;
 }
 h3 {
@@ -60,8 +60,8 @@ section#content ol li {
 section#content ul,
 section#content ol,
 section#content p {
-  line-height: 1.5em;
-  margin-bottom: 0.4em;
+  line-height: 1.7em;
+  margin-bottom: 0.5em;
 }
 section#content blockquote {
   margin: 0.5em 0 0.5em 2em;
@@ -92,6 +92,9 @@ section#content a:hover {
   content: "";
   clear: both;
 }
+.container img {
+  max-width: 100%;
+}
 header#cc-header {
   background: #41aad3;
   padding: 0.8em 0;
@@ -119,7 +122,7 @@ section#content {
   margin: 0 1.0416666666666665%;
 }
 aside#sidebar {
-  background: #dfb783;
+  background: #ffe6c5;
   border-radius: 5px;
   display: inline;
   float: left;
@@ -133,7 +136,7 @@ footer#footer {
   text-align: center;
   padding: 0.5em 0;
   color: #fff;
-  margin-top: 1em;
+  margin-top: 2em;
   border-top: 3px solid #3a94b5;
 }
 /**********************
