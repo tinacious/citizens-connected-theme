@@ -8,15 +8,18 @@
 .radius(@r: 5px) {
 	border-radius: @r;
 }
-@blue: #41aad3;
-@darkblue: #3a94b5;
-@green: #97d036;
-// @tan: #dfb783;
-@tan: #FFE6C5;
+@blue: #41aad3; // 65,170,277
+@darkblue: #3a94b5; // 58,148,181
+@green: #97d036; // 151,208,54
+@tan: #FFE6C5; // 255,230,197
+@darktan: #dfb783; // 233,183,131
 
 /**********************
   type
 **********************/
+h1,h2,h3,h4 {
+	clear: both;
+}
 h1,h2,h3 {
 	font-family: patua-one, serif;
 }
@@ -28,14 +31,14 @@ h1 {
 	margin-bottom: 0.5em;
 }
 h2 {
-	font-size: 2em;
+	font-size: 1.7em;
 	margin-bottom: 0.4em;
 	margin-top: 0.5em;
 }
 h3 {
-	font-size: 1.6em;
-	margin-top: 0.5em;
-	margin-bottom: 0.2em;
+	font-size: 1.4em;
+	margin-top: 0.7em;
+	margin-bottom: 0.3em;
 }
 body {
 	-webkit-font-smoothing: antialiased;
@@ -45,7 +48,7 @@ body {
 b, strong {
 	font-weight: 700;
 }
-section#content {
+section.content {
 	ul, ol {
 		margin-left: 2em;
 	}
@@ -82,8 +85,38 @@ section#content {
 	}
 }
 /**********************
+  ligature symbols
+  kudakurage.com/ligature_symbols
+**********************/
+@font-face {
+	font-family: 'LigatureSymbols';
+	src: url('symbols/LigatureSymbols-2.09.eot');
+	src: url('symbols/LigatureSymbols-2.09.eot?#iefix') format('embedded-opentype'),
+		 url('symbols/LigatureSymbols-2.09.woff') format('woff'),
+		 url('symbols/LigatureSymbols-2.09.ttf') format('truetype'),
+		 url('symbols/LigatureSymbols-2.09.svg#LigatureSymbols') format('svg');
+	src: url('symbols/LigatureSymbols-2.09.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+.lsf, .lsf-icon:before {
+	font-family: 'LigatureSymbols';
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	-ms-text-rendering: optimizeLegibility;
+	-o-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+}
+// my adds overrides
+.lsf-icon:before {
+	content:attr(title);
+	margin-right:0.4em;
+	font-size:120%;
+}
+/**********************
   containers
 **********************/
+* {box-sizing: border-box; -moz-box-sizing: border-box;}
 .container {
 	max-width: 960px;
 	margin: 0 auto;
@@ -96,7 +129,7 @@ header#cc-header {
 	background: @blue;
 	padding: 0.8em 0;
 	border-bottom: 5px solid @darkblue;
-	margin-bottom: 1em;
+	margin-bottom: 1.5em;
 	.cf();
 	h1 {
 		.column(12);
@@ -105,14 +138,22 @@ header#cc-header {
 		font-size: 2.5em;
 	}
 }
-section#content {
+section#main-content {
 	.column(7.5);
 }
 aside#sidebar {
 	background: @tan;
 	.radius();
-	.column(4);
-	.push(0.5);
+	.column(4.2);
+	.push(0.3);
+	section.content {
+		.column(11);
+		.push(0.5);
+	}
+	h3 {
+		padding: 0.5em 0 0.3em 0;
+		// margin-bottom: 0.5em;
+	}
 }
 footer#footer {
 	background: @blue;
@@ -123,14 +164,49 @@ footer#footer {
 	margin-top: 2em;
 	border-top: 3px solid @darkblue;
 }
+#breadcrumb {
+	font-size: 0.9em;
+	margin: 0 0 1.5em 0;
+	.breadcrumb {
+		a {
+			text-decoration: none;
+		}
+	}
+}
 /**********************
   forms
 **********************/
-// do this
+// default styles
+fieldset {
+	label, input {
+		line-height: 1.5em;
+		padding: 0.15em 0;
+	}
+	label {
+		font-weight: 700;
+		font-size: 0.8em;
+		span {
+			color: red;
+		}
+	}
+	input, textarea {
+		border: 1px solid @darktan;
+		font-family: verdana, sans-serif;
+		font-size: 0.7em;
+		&:focus {
+			outline: none;
+			box-shadow: 0 0 8px @darktan;
+		}
+	}
+	input {
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+	}
+}
+
 button, a.button, input[type=submit] {
 	background: @green;
-	line-height: 2em;
-	padding: 0 2em;
+	padding: 0.em 2em;
 	font-size: 1.3em;
 	color: #fff;
 	text-shadow: 1px 1px rgba(0,0,0,0.2);
@@ -142,7 +218,47 @@ button, a.button, input[type=submit] {
 		background: @darkblue;
 	}
 }
-
+// sidebar-specific styles
+form#action {
+	fieldset {
+		margin: 1em 0 0.6em 0;
+		label, input {
+			display: block;
+			float: left;
+		}
+		label {
+			width: 32%;
+			clear: both;
+			&.subject {
+				margin-top: 1em;
+			}
+		}
+		input {
+			width: 68%;
+			margin-bottom: 0.8em;
+			&.subject {
+				width: 100%;
+				clear: both;
+			}
+		}
+		input[type=checkbox] {
+			width: 10%;
+			margin-top: 0.6em;
+		}
+		input[type=submit] {
+			clear: both;
+		}
+		textarea {
+			width: 100%;
+			width: 100%;
+			// min-height: 100px;
+			// min-height: 250px; // use if not using elastic.js to resize textarea
+			// max-height: 600px;
+			resize: vertical;
+			clear: both;
+		}
+	}	
+}
 /**********************
   responsive (mobile)
 **********************/
@@ -153,9 +269,11 @@ button, a.button, input[type=submit] {
 			.push(0.5);
 		}
 	}
-	section#content {
+	section#main-content {
 		.column(11);
 		.push(0.5);
+	}
+	section.content {
 		h1 {
 			font-size: 1.9em;
 		}
@@ -163,7 +281,7 @@ button, a.button, input[type=submit] {
 			font-size: 1.6em;
 		}
 		h3 {
-			font-size: 1.4em;
+			font-size: 1.3em;
 		}
 		p {
 			font-size: 0.95em;

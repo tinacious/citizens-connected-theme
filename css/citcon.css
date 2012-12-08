@@ -16,6 +16,12 @@ body:after {
 **********************/
 h1,
 h2,
+h3,
+h4 {
+  clear: both;
+}
+h1,
+h2,
 h3 {
   font-family: patua-one, serif;
 }
@@ -29,14 +35,14 @@ h1 {
   margin-bottom: 0.5em;
 }
 h2 {
-  font-size: 2em;
+  font-size: 1.7em;
   margin-bottom: 0.4em;
   margin-top: 0.5em;
 }
 h3 {
-  font-size: 1.6em;
-  margin-top: 0.5em;
-  margin-bottom: 0.2em;
+  font-size: 1.4em;
+  margin-top: 0.7em;
+  margin-bottom: 0.3em;
 }
 body {
   -webkit-font-smoothing: antialiased;
@@ -47,42 +53,72 @@ b,
 strong {
   font-weight: 700;
 }
-section#content ul,
-section#content ol {
+section.content ul,
+section.content ol {
   margin-left: 2em;
 }
-section#content ul li {
+section.content ul li {
   list-style-type: disc;
 }
-section#content ol li {
+section.content ol li {
   list-style-type: decimal;
 }
-section#content ul,
-section#content ol,
-section#content p {
+section.content ul,
+section.content ol,
+section.content p {
   line-height: 1.7em;
   margin-bottom: 0.5em;
 }
-section#content blockquote {
+section.content blockquote {
   margin: 0.5em 0 0.5em 2em;
   color: #666;
 }
-section#content code {
+section.content code {
   line-height: 1.3em;
   font-family: consolas, courier, monospace;
   font-size: 0.8em;
   color: #666;
   -webkit-font-smoothing: subpixel-antialiased;
 }
-section#content a {
+section.content a {
   color: #41aad3;
 }
-section#content a:hover {
+section.content a:hover {
   color: #97d036;
+}
+/**********************
+  ligature symbols
+  kudakurage.com/ligature_symbols
+**********************/
+@font-face {
+  font-family: 'LigatureSymbols';
+  src: url('symbols/LigatureSymbols-2.09.eot');
+  src: url('symbols/LigatureSymbols-2.09.eot?#iefix') format('embedded-opentype'), url('symbols/LigatureSymbols-2.09.woff') format('woff'), url('symbols/LigatureSymbols-2.09.ttf') format('truetype'), url('symbols/LigatureSymbols-2.09.svg#LigatureSymbols') format('svg');
+  src: url('symbols/LigatureSymbols-2.09.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.lsf,
+.lsf-icon:before {
+  font-family: 'LigatureSymbols';
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+}
+.lsf-icon:before {
+  content: attr(title);
+  margin-right: 0.4em;
+  font-size: 120%;
 }
 /**********************
   containers
 **********************/
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -99,7 +135,7 @@ header#cc-header {
   background: #41aad3;
   padding: 0.8em 0;
   border-bottom: 5px solid #3a94b5;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 header#cc-header:after {
   display: block;
@@ -115,7 +151,7 @@ header#cc-header h1 {
   text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
   font-size: 2.5em;
 }
-section#content {
+section#main-content {
   display: inline;
   float: left;
   width: 60.416666666666664%;
@@ -126,9 +162,19 @@ aside#sidebar {
   border-radius: 5px;
   display: inline;
   float: left;
-  width: 31.25%;
+  width: 32.916666666666664%;
+  margin: 0 1.0416666666666665%;
+  margin-left: 3.5416666666666665%;
+}
+aside#sidebar section.content {
+  display: inline;
+  float: left;
+  width: 89.58333333333334%;
   margin: 0 1.0416666666666665%;
   margin-left: 5.208333333333332%;
+}
+aside#sidebar h3 {
+  padding: 0.5em 0 0.3em 0;
 }
 footer#footer {
   background: #41aad3;
@@ -139,15 +185,48 @@ footer#footer {
   margin-top: 2em;
   border-top: 3px solid #3a94b5;
 }
+#breadcrumb {
+  font-size: 0.9em;
+  margin: 0 0 1.5em 0;
+}
+#breadcrumb .breadcrumb a {
+  text-decoration: none;
+}
 /**********************
   forms
 **********************/
+fieldset label,
+fieldset input {
+  line-height: 1.5em;
+  padding: 0.15em 0;
+}
+fieldset label {
+  font-weight: 700;
+  font-size: 0.8em;
+}
+fieldset label span {
+  color: red;
+}
+fieldset input,
+fieldset textarea {
+  border: 1px solid #dfb783;
+  font-family: verdana, sans-serif;
+  font-size: 0.7em;
+}
+fieldset input:focus,
+fieldset textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px #dfb783;
+}
+fieldset input {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
 button,
 a.button,
 input[type=submit] {
   background: #97d036;
-  line-height: 2em;
-  padding: 0 2em;
+  padding: 0.em 2em;
   font-size: 1.3em;
   color: #fff;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
@@ -161,6 +240,41 @@ a.button:hover,
 input[type=submit]:hover {
   background: #3a94b5;
 }
+form#action fieldset {
+  margin: 1em 0 0.6em 0;
+}
+form#action fieldset label,
+form#action fieldset input {
+  display: block;
+  float: left;
+}
+form#action fieldset label {
+  width: 32%;
+  clear: both;
+}
+form#action fieldset label.subject {
+  margin-top: 1em;
+}
+form#action fieldset input {
+  width: 68%;
+  margin-bottom: 0.8em;
+}
+form#action fieldset input.subject {
+  width: 100%;
+  clear: both;
+}
+form#action fieldset input[type=checkbox] {
+  width: 10%;
+  margin-top: 0.6em;
+}
+form#action fieldset input[type=submit] {
+  clear: both;
+}
+form#action fieldset textarea {
+  width: 100%;
+  resize: vertical;
+  clear: both;
+}
 /**********************
   responsive (mobile)
 **********************/
@@ -172,23 +286,23 @@ input[type=submit]:hover {
     margin: 0 1.0416666666666665%;
     margin-left: 5.208333333333332%;
   }
-  section#content {
+  section#main-content {
     display: inline;
     float: left;
     width: 89.58333333333334%;
     margin: 0 1.0416666666666665%;
     margin-left: 5.208333333333332%;
   }
-  section#content h1 {
+  section.content h1 {
     font-size: 1.9em;
   }
-  section#content h2 {
+  section.content h2 {
     font-size: 1.6em;
   }
-  section#content h3 {
-    font-size: 1.4em;
+  section.content h3 {
+    font-size: 1.3em;
   }
-  section#content p {
+  section.content p {
     font-size: 0.95em;
   }
   aside#sidebar {

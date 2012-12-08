@@ -7,6 +7,8 @@
 	<script src="http://use.edgefonts.net/patua-one.js"></script>
 	<script src="http://use.edgefonts.net/actor.js"></script>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="js/jquery.autogrow.js"></script>
+	<script type="text/javascript" src="js/citcon.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/citcon.css" media="all">
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,7 +22,14 @@
 		</div>
 	</header>
 	<div class="container">
-		<section id="content">
+		<section id="main-content" class="content">
+
+			<div id="breadcrumb">
+				<div class="breadcrumb">
+					<a href="/"><i class="lsf-icon" title="home"></i>Home</a> &raquo; Sample Campaign
+				</div>
+			</div>
+
 			<h1>Clean up BP's oil spill because it's really gross!</h1>
 			<img src="http://dummyimage.com/600x300/dfb783/8a7256&text=campaign+image+(600px+300px)" alt="campaign image" />
 
@@ -29,6 +38,8 @@
 			<p><strong>Citizens Connected with Nature</strong> is a Drupal theme for the Citizens Connected Drupal distribution which is currently in development. Keep up with all the theme design changes at the <a href="https://github.com/tinacious/citizens-connected-theme" target="_blank">Github repository</a>. Theme design and front-end development by Tina Holly, <a href="http://tinaciousdesign.com" target="_blank">Tinacious Design</a>. This theme is <b>Responsive</b>.
 			</p>
 			<p>Senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+			<h3>Ordered Lists</h3>
 
 			<ol>
 				<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
@@ -39,18 +50,60 @@
 
 			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
 
+			<h3>Unordered Lists</h3>
 			<ul>
 				<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
 				<li>Aliquam tincidunt mauris eu risus.</li>
 			</ul>
 
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-			
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>		
 		</section>
 
 		<aside id="sidebar">
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
-			<button>Take Action</button>
+			<section class="content">
+				<h2>Take Action</h2>
+				<form id="action" action="/">
+					<fieldset>
+						<label for="first-name">First Name <span>*</span></label>
+						<input type="text" id="first-name" />
+						<label for="last-name">Last Name <span>*</span></label>
+						<input type="text" id="last-name" />
+						<label for="email">Email <span>*</span></label>
+						<input type="email" id="email" />
+						<label for="address">Address</label>
+						<input type="text" id="address" />
+						<label for="display-info" class="checkbox">Display Info</label><input type="checkbox" value="display-info"/>
+						<label for="opt-in" class="checkbox">Opt In</label><input type="checkbox" value="opt-in"/>
+						
+						<h3>Find Your Target</h3>
+						<label for="postal-code">Postal Code <span>*</span></label>
+						<input type="text" id="postal-code" />
+
+						<label for="province">Province</label>
+						<select name="province" id="province">
+							<option value="ontario">Ontario</option>
+							<option value="bc">British Columbia</option>
+						</select>
+
+						<label for="subject" class="subject">Subject <span>*</span></label>
+						<input type="subject" class="subject" id="subject" value="Clean up BP's gross oil spill please!" />
+						<textarea name="message" id="message">
+Dear Decision-Maker,
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+
+Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+</textarea>
+
+						<input type="submit" value="Take Action" />
+					</fieldset>
+				</form>
+			</section>
+			<script type='text/javascript'>
+			
+			</script>
 		</aside>
 	</div> <!-- /.container -->
 	<footer id="footer">
