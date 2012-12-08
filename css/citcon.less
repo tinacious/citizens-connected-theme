@@ -143,9 +143,11 @@ section#main-content {
 }
 aside#sidebar {
 	background: @tan;
+	padding: 0.5em 0;
 	.radius();
 	.column(4.2);
 	.push(0.3);
+	.cf();
 	section.content {
 		.column(11);
 		.push(0.5);
@@ -206,12 +208,11 @@ fieldset {
 	select {
 		border: 1px solid @darktan;
 	}
-
 }
 
 button, a.button, input[type=submit] {
 	background: @green;
-	padding: 0.em 2em;
+	padding: 0.2em 0;
 	font-size: 1.3em;
 	color: #fff;
 	text-shadow: 1px 1px rgba(0,0,0,0.2);
@@ -252,6 +253,8 @@ form#action {
 		}
 		input[type=submit] {
 			clear: both;
+			margin-top: 1em;
+			.column(12);
 		}
 		textarea {
 			width: 100%;
@@ -261,6 +264,7 @@ form#action {
 			// max-height: 600px;
 			resize: vertical;
 			clear: both;
+			margin-bottom: 1em;
 		}
 	}	
 }

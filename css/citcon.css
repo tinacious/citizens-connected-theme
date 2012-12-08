@@ -159,12 +159,18 @@ section#main-content {
 }
 aside#sidebar {
   background: #ffe6c5;
+  padding: 0.5em 0;
   border-radius: 5px;
   display: inline;
   float: left;
   width: 32.916666666666664%;
   margin: 0 1.0416666666666665%;
   margin-left: 3.5416666666666665%;
+}
+aside#sidebar:after {
+  display: block;
+  content: "";
+  clear: both;
 }
 aside#sidebar section.content {
   display: inline;
@@ -233,7 +239,7 @@ button,
 a.button,
 input[type=submit] {
   background: #97d036;
-  padding: 0.em 2em;
+  padding: 0.2em 0;
   font-size: 1.3em;
   color: #fff;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
@@ -278,11 +284,17 @@ form#action fieldset input[type=checkbox] {
 }
 form#action fieldset input[type=submit] {
   clear: both;
+  margin-top: 1em;
+  display: inline;
+  float: left;
+  width: 97.91666666666666%;
+  margin: 0 1.0416666666666665%;
 }
 form#action fieldset textarea {
   width: 100%;
   resize: vertical;
   clear: both;
+  margin-bottom: 1em;
 }
 /**********************
   responsive (mobile)
