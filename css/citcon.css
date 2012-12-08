@@ -195,6 +195,7 @@ footer#footer {
 /**********************
   forms
 **********************/
+fieldset select,
 fieldset label,
 fieldset input {
   line-height: 1.5em;
@@ -208,19 +209,25 @@ fieldset label span {
   color: red;
 }
 fieldset input,
-fieldset textarea {
+fieldset textarea,
+fieldset select {
   border: 1px solid #dfb783;
   font-family: verdana, sans-serif;
   font-size: 0.7em;
+  border-radius: 3px;
 }
 fieldset input:focus,
-fieldset textarea:focus {
+fieldset textarea:focus,
+fieldset select:focus {
   outline: none;
   box-shadow: 0 0 8px #dfb783;
 }
 fieldset input {
   padding-left: 0.5em;
   padding-right: 0.5em;
+}
+fieldset select {
+  border: 1px solid #dfb783;
 }
 button,
 a.button,
@@ -255,11 +262,13 @@ form#action fieldset label {
 form#action fieldset label.subject {
   margin-top: 1em;
 }
-form#action fieldset input {
+form#action fieldset input,
+form#action fieldset select {
   width: 68%;
   margin-bottom: 0.8em;
 }
-form#action fieldset input.subject {
+form#action fieldset input.subject,
+form#action fieldset select.subject {
   width: 100%;
   clear: both;
 }

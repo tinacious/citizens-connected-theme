@@ -178,7 +178,7 @@ footer#footer {
 **********************/
 // default styles
 fieldset {
-	label, input {
+	select, label, input {
 		line-height: 1.5em;
 		padding: 0.15em 0;
 	}
@@ -189,10 +189,11 @@ fieldset {
 			color: red;
 		}
 	}
-	input, textarea {
+	input, textarea, select {
 		border: 1px solid @darktan;
 		font-family: verdana, sans-serif;
 		font-size: 0.7em;
+		.radius(3px);
 		&:focus {
 			outline: none;
 			box-shadow: 0 0 8px @darktan;
@@ -202,6 +203,10 @@ fieldset {
 		padding-left: 0.5em;
 		padding-right: 0.5em;
 	}
+	select {
+		border: 1px solid @darktan;
+	}
+
 }
 
 button, a.button, input[type=submit] {
@@ -233,7 +238,7 @@ form#action {
 				margin-top: 1em;
 			}
 		}
-		input {
+		input, select {
 			width: 68%;
 			margin-bottom: 0.8em;
 			&.subject {

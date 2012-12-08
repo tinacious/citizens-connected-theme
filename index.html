@@ -83,6 +83,7 @@
 						<select name="province" id="province">
 							<option value="ontario">Ontario</option>
 							<option value="bc">British Columbia</option>
+							<option value="alberta">Alberta</option>
 						</select>
 
 						<label for="subject" class="subject">Subject <span>*</span></label>
@@ -102,7 +103,9 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 				</form>
 			</section>
 			<script type='text/javascript'>
-			
+				$(function() {
+					$('textarea').autogrow();
+				});
 			</script>
 		</aside>
 	</div> <!-- /.container -->
