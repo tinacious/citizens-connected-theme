@@ -18,6 +18,6 @@ Learn more about Citizens Connected at their website [citizensconnected.com](htt
 
 ![Citizens Connected wireframes](https://raw.github.com/tinacious/citizens-connected-theme/master/planning/wireframes.png)
 
-Christina Holly
-**Tinacious Design**
+Christina Holly  
+**Tinacious Design**  
 [tinaciousdesign.com](http://tinaciousdesign.com)
