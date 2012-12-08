@@ -1,7 +1,7 @@
 #Citizens Connected with Nature
 ##Responsive Drupal Theme for the Citizens Connected Drupal Distribution
 
-![Preview of Citizens Connected theme](https://raw.github.com/tinacious/citizens-connected-theme/master/planning/preview2.png)
+![Preview of Citizens Connected theme](https://raw.github.com/tinacious/citizens-connected-theme/master/planning/preview.png)
 
 [Citizens Connected](http://www.citizensconnected.com/) is a Drupal distribution currently in development.
 
