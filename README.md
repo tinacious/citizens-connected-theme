@@ -1,8 +1,6 @@
 #Citizens Connected with Nature
 ##Responsive Drupal Theme for the Citizens Connected Drupal Distribution
 
-![Preview of Citizens Connected theme](https://raw.github.com/tinacious/citizens-connected-theme/master/planning/preview.png)
-
 [Citizens Connected](http://www.citizensconnected.com/) is a Drupal distribution currently in development.
 
 > It allows your supporters to send targeted messages directly from your website to decision makers. 
@@ -17,6 +15,8 @@ It is built using HTML, LESS CSS and the [Semantic.gs](http://semantic.gs) grid 
 View the project in action [here](http://christinaholly.com/qa/citizensconnected/).
 
 Learn more about Citizens Connected at their website [citizensconnected.com](http://citizensconnected.com/).
+
+![Preview of Citizens Connected theme](https://raw.github.com/tinacious/citizens-connected-theme/master/planning/preview.png)
 
 ![Citizens Connected wireframes](https://raw.github.com/tinacious/citizens-connected-theme/master/planning/wireframes.png)
 
