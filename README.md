@@ -14,6 +14,8 @@ Possibly to be named **Citizens Connected with Nature**, this theme is a Respons
 
 It is built using HTML, LESS CSS and the [Semantic.gs](http://semantic.gs) grid system.
 
+View the project in action [here](http://christinaholly.com/qa/citizensconnected/).
+
 Learn more about Citizens Connected at their website [citizensconnected.com](http://citizensconnected.com/).
 
 ![Citizens Connected wireframes](https://raw.github.com/tinacious/citizens-connected-theme/master/planning/wireframes.png)
