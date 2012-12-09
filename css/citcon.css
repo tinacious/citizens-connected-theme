@@ -151,6 +151,61 @@ header#cc-header h1 {
   text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
   font-size: 2.5em;
 }
+#messages {
+  margin-bottom: 1em;
+}
+#messages:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+#messages div {
+  display: inline;
+  float: left;
+  width: 97.91666666666666%;
+  margin: 0 1.0416666666666665%;
+  padding: 1em 0;
+  margin-bottom: 0.5em;
+}
+#messages div i {
+  display: inline;
+  float: left;
+  width: 4.166666666666666%;
+  margin: 0 1.0416666666666665%;
+  margin-left: 3.1249999999999996%;
+  font-size: 1.4em;
+}
+#messages div p {
+  display: inline;
+  float: left;
+  width: 87.5%;
+  margin: 0 1.0416666666666665%;
+  font-size: 0.9em;
+}
+#messages .warning {
+  background: #FFFCE5;
+  border: 1px solid #ED5;
+  color: #705F48;
+}
+#messages .warning i {
+  color: #dfb783;
+}
+#messages .error {
+  background: #FEF5F1;
+  border: 1px solid #b22222;
+  color: #b22222;
+}
+#messages .error i {
+  color: #b22222;
+}
+#messages .status {
+  background: #F8FFF0;
+  border: 1px solid #BE7;
+  color: #5c9e00;
+}
+#messages .status i {
+  color: #5c9e00;
+}
 section#main-content {
   display: inline;
   float: left;
@@ -315,6 +370,33 @@ form#action fieldset textarea {
     width: 89.58333333333334%;
     margin: 0 1.0416666666666665%;
     margin-left: 5.208333333333332%;
+  }
+  #messages:after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+  #messages div {
+    display: inline;
+    float: left;
+    width: 89.58333333333334%;
+    margin: 0 1.0416666666666665%;
+    margin-left: 5.208333333333332%;
+    margin-bottom: 0.5em;
+  }
+  #messages div i {
+    display: inline;
+    float: left;
+    width: 8.333333333333332%;
+    margin: 0 1.0416666666666665%;
+    margin-left: 5.208333333333332%;
+    font-size: 1.4em;
+  }
+  #messages div p {
+    display: inline;
+    float: left;
+    width: 79.16666666666666%;
+    margin: 0 1.0416666666666665%;
   }
   section#main-content {
     display: inline;
