@@ -237,9 +237,15 @@ aside#sidebar section.content {
 aside#sidebar h3 {
   padding: 0.5em 0 0.3em 0;
 }
+aside#sidebar .goal {
+  text-align: center;
+}
+aside#sidebar .goal p {
+  line-height: 1.3em;
+}
 aside#sidebar .goal p.number {
   font-size: 2em;
-  text-align: center;
+  margin-bottom: 0.3em;
 }
 aside#sidebar p.result {
   font-size: 0.8em;
@@ -295,6 +301,9 @@ fieldset select:focus {
 fieldset input {
   padding-left: 0.5em;
   padding-right: 0.5em;
+}
+fieldset textarea {
+  padding: 0.5em;
 }
 fieldset select {
   border: 1px solid #dfb783;
@@ -425,4 +434,24 @@ form#action fieldset textarea {
     margin-left: 5.208333333333332%;
     margin-top: 1em;
   }
+  fieldset select,
+  fieldset label,
+  fieldset input,
+  fieldset textarea {
+    font-size: 0.9em;
+  }
+  form#action fieldset label,
+  form#action fieldset input,
+  form#action fieldset select {
+    width: 100%;
+  }
+  form#action fieldset label.checkbox {
+    width: 50%;
+  }
+}
+/**********************
+  responsive (desktop tweaks)
+**********************/
+@media screen and (min-width: 720px) {
+  
 }

@@ -2,18 +2,19 @@
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
-	<meta name = "viewport" content="width=device-width">
+	<meta name = "viewport" content="width=device-width user-scalable=no">
 	<title>Citizens Connected with Nature Theme</title>
 	<script src="http://use.edgefonts.net/patua-one.js"></script>
 	<script src="http://use.edgefonts.net/actor.js"></script>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="js/jquery.autogrow.js"></script>
-	<script type="text/javascript" src="js/citcon.min.js"></script>
+	
 	<link rel="stylesheet" type="text/css" href="css/citcon.css" media="all">
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/citcon-ie.css" />
 	<![endif]-->
+	<script type="text/javascript" src="js/citcon.min.js"></script>
 </head>
 <body>
 	<header id="cc-header">
@@ -86,8 +87,11 @@
 					<p class="number">
 						100 / 1000
 					</p>
+					<p>
+						Help us reach our goal of 1000 signatures!
+					</p>
 				</div>
-				<form id="action" action="/">
+				<form id="action">
 					<fieldset>
 						<label for="first-name">First Name <span>*</span></label>
 						<input type="text" id="first-name" />
@@ -128,11 +132,6 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 					</fieldset>
 				</form>
 			</section>
-			<script type='text/javascript'>
-				$(function() {
-					$('textarea').autogrow();
-				});
-			</script>
 		</aside>
 	</div> <!-- /.container -->
 	<footer id="footer">

@@ -203,9 +203,14 @@ aside#sidebar {
 		// margin-bottom: 0.5em;
 	}
 	.goal {
-		p.number {
-			font-size: 2em;
-			text-align: center;
+		text-align: center;
+		
+		p {
+			line-height: 1.3em;
+			&.number {
+				font-size: 2em;
+				margin-bottom: 0.3em;
+			}
 		}
 	}
 	p.result {
@@ -261,6 +266,9 @@ fieldset {
 	input {
 		padding-left: 0.5em;
 		padding-right: 0.5em;
+	}
+	textarea {
+		padding: 0.5em;
 	}
 	select {
 		border: 1px solid @darktan;
@@ -375,4 +383,26 @@ form#action {
 		.push(0.5);
 		margin-top: 1em;
 	}
+	// Forms
+	fieldset {
+		select, label, input, textarea {
+			font-size: 0.9em;
+		}
+	}
+	form#action {
+		fieldset {
+			label, input, select {
+				width: 100%;
+			}
+			label.checkbox {
+				width: 50%;
+			}
+		}
+	}
+}
+/**********************
+  responsive (desktop tweaks)
+**********************/
+@media screen and (min-width: 720px) {
+	
 }

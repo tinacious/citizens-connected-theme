@@ -1,3 +1,4 @@
 $(document).ready(function(){
-	// Stuff
+	// textarea autogrow
+	$('textarea').autogrow();
 });
