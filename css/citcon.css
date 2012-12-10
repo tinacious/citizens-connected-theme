@@ -212,6 +212,12 @@ section#main-content {
   width: 60.416666666666664%;
   margin: 0 1.0416666666666665%;
 }
+section#main-content span.img-caption {
+  font-size: 0.9em;
+  margin: 0.4em 0 1.2em 0;
+  display: block;
+  clear: both;
+}
 aside#sidebar {
   background: #ffe6c5;
   padding: 0.5em 0;
