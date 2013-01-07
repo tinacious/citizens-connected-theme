@@ -248,6 +248,38 @@ footer#footer {
 /**********************
   forms
 **********************/
+// tabs
+ul.drupal-tabs {
+	margin: 1.5em auto;
+	li {
+		display: inline-block;
+		border: 1px solid @blue;
+		@radius: 10px;
+		border-top-left-radius: @radius;
+		border-top-right-radius: @radius;
+		border-bottom: 0;
+		&:hover {
+			border-color: @green;
+		}
+		&.active {
+			background: @blue;
+			a {
+				color: #fff;
+				&:hover {
+					cursor: default;
+				}
+			}
+			&:hover {
+				border-color: @blue;
+			}
+		}
+		a {
+			text-decoration: none;
+			display: block;
+			padding: 0.2em 1em;
+		}
+	}
+}
 // default styles
 fieldset {
 	select, label, input {
