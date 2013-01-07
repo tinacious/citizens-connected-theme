@@ -308,9 +308,6 @@ fieldset input {
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
-fieldset input[type=checkbox] {
-  outline: none;
-}
 fieldset textarea {
   padding: 0.5em;
 }
