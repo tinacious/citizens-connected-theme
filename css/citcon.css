@@ -289,18 +289,21 @@ ul.drupal-tabs li {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom: 0;
+  background: #41aad3;
 }
 ul.drupal-tabs li:hover {
+  background: #97d036;
   border-color: #97d036;
 }
 ul.drupal-tabs li.active {
-  background: #41aad3;
+  background: #fff;
 }
 ul.drupal-tabs li.active a {
-  color: #fff;
+  color: #41aad3;
 }
 ul.drupal-tabs li.active a:hover {
   cursor: default;
+  color: #41aad3;
 }
 ul.drupal-tabs li.active:hover {
   border-color: #41aad3;
@@ -309,6 +312,10 @@ ul.drupal-tabs li a {
   text-decoration: none;
   display: block;
   padding: 0.2em 1em;
+  color: #fff;
+}
+ul.drupal-tabs li a:hover {
+  color: #fff;
 }
 fieldset select,
 fieldset label,

@@ -258,15 +258,18 @@ ul.drupal-tabs {
 		border-top-left-radius: @radius;
 		border-top-right-radius: @radius;
 		border-bottom: 0;
+		background: @blue;
 		&:hover {
+			background: @green;
 			border-color: @green;
 		}
 		&.active {
-			background: @blue;
+			background: #fff;
 			a {
-				color: #fff;
+				color: @blue;
 				&:hover {
 					cursor: default;
+					color: @blue;
 				}
 			}
 			&:hover {
@@ -277,6 +280,10 @@ ul.drupal-tabs {
 			text-decoration: none;
 			display: block;
 			padding: 0.2em 1em;
+			color: #fff;
+			&:hover {
+				color: #fff;
+			}
 		}
 	}
 }
