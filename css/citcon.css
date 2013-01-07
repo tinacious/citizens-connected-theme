@@ -70,10 +70,13 @@ section.content p {
   margin-bottom: 0.5em;
 }
 section.content blockquote {
-  margin: 0.5em 0 0.5em 2em;
-  color: #666;
+  margin: 0.5em 0 0.5em 0;
+  padding-left: 2em;
+  color: #A68862;
+  font-style: italic;
 }
-section.content code {
+section.content code,
+section.content pre {
   line-height: 1.3em;
   font-family: consolas, courier, monospace;
   font-size: 0.8em;
@@ -314,6 +317,28 @@ fieldset textarea {
 fieldset select {
   border: 1px solid #dfb783;
 }
+table {
+  width: 100%;
+  border: 1px solid #ffe6c5;
+  margin: 1.5em auto;
+}
+table thead tr {
+  background: #ffe6c5;
+}
+table tbody tr.odd {
+  background: rgba(255, 230, 197, 0.2);
+}
+table td,
+table th {
+  padding: 0.5em;
+}
+table th {
+  font-weight: 700;
+  border: 1px solid #dfb783;
+}
+table td {
+  border: 1px solid #ffe6c5;
+}
 button,
 a.button,
 input[type=submit] {
@@ -370,7 +395,6 @@ form#action fieldset input[type=submit] {
   margin: 0 1.0416666666666665%;
 }
 form#action fieldset textarea {
-  width: 100%;
   width: 100%;
   resize: vertical;
   clear: both;

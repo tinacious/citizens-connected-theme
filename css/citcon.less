@@ -67,10 +67,12 @@ section.content {
 		margin-bottom: 0.5em;
 	}
 	blockquote {
-		margin: 0.5em 0 0.5em 2em;
-		color: #666;
+		margin: 0.5em 0 0.5em 0;
+		padding-left: 2em;
+		color: #A68862;
+		font-style: italic;
 	}
-	code {
+	code, pre {
 		line-height: 1.3em;
 		font-family: consolas, courier, monospace;
 		font-size: 0.8em;
@@ -278,6 +280,33 @@ fieldset {
 	}
 	select {
 		border: 1px solid @darktan;
+	}
+}
+
+table {
+	width: 100%;
+	border: 1px solid @tan;
+	margin: 1.5em auto;
+	thead {
+		tr {
+			background: @tan;
+		}
+	}
+	tbody {
+		tr.odd {
+			background: fade(@tan,20%);
+		}
+	}
+	
+	td, th {
+		padding: 0.5em;
+	}
+	th {
+		font-weight: 700;
+		border: 1px solid @darktan;
+	}
+	td {
+		border: 1px solid @tan;
 	}
 }
 
